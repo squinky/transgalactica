@@ -3,6 +3,7 @@ var progression = 0;
 var staticAudio;
 var currentStoryAudio, currentStoryLoop;
 var currentTranscriptSection;
+var currentFillerLoop;
 
 function rotateKnob(v)
 {
@@ -12,6 +13,11 @@ function rotateKnob(v)
 	currentStation = (v/100).toFixed(1);
 	$("#station").text(currentStation);
 
+	if (Math.abs(story[progression+1].station - currentStation) < 0.3)
+	{
+		currentStoryAudio = null;
+		progression++;
+	}
 	if (Math.abs(story[progression].station - currentStation) < 0.3)
 	{
 		if (!currentStoryAudio) initStoryAudio();
@@ -20,6 +26,17 @@ function rotateKnob(v)
 	else
 	{
 		if (currentStoryAudio) currentStoryAudio.stop();
+		for (var f of filler)
+		{
+			if (f.station == currentStation)
+			{
+				f.audio.play();
+			}
+			else if (f.audio.playing())
+			{
+				f.audio.pause();
+			}
+		}
 	}
 }
 
@@ -27,7 +44,8 @@ function initStoryAudio()
 {
 	currentStoryAudio = new Howl(
 	{
-		src: [story[progression].audio],
+		src: [story[progression].audioFile],
+		loop: true,
 		onplay: function()
 		{
 			currentTranscriptSection = 0;
@@ -48,6 +66,8 @@ function initStoryAudio()
 
 function playingStoryAudio()
 {
+	var time = currentStoryAudio.seek();
+
 	if (currentTranscriptSection < story[progression].transcript.length)
 	{
 		if (time >= story[progression].transcript[currentTranscriptSection].time)
@@ -61,7 +81,6 @@ function playingStoryAudio()
 	currentStoryAudio.volume(vol);
 	staticAudio.volume(1 - vol);
 	$("#transcript").css('opacity', vol);
-	var time = currentStoryAudio.seek();
 
 	currentStoryLoop = requestAnimationFrame(playingStoryAudio);
 }

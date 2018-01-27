@@ -4,7 +4,7 @@ var story =
 	// #1: A T.R.A.N.S MANIFESTO
 	{
 		station: 99.9,
-		audio: "sounds/manifesto.ogg",
+		audioFile: "sounds/manifesto.ogg",
 		transcript:
 		[
 			{ time: 0, text: "This is T.R.A.N.S Radio. We are the Trans Radio Artist Network in Space. We know you hear us. If you are one of us, this transmission is for you." },
@@ -22,5 +22,19 @@ var story =
 			{ time: 78.865, text: "We know that there's no such thing as a Utopia, but hey, whatever we make together can't be worse than here, right?"},
 			{ time: 85.407, text: "...Find us...<br>Eight. Nine. Five. Repeating transmission. Eight. Nine. Five.<br>...Find us..."}
 		]
+	},
+	// #2: A PSA
+	{
+		station: 89.5,
+		audioFile: "sounds/psa.ogg",
+		transcript:
+		[
+			{ time: 0, text: "This is a Public Service Announcement brought to you by the Trans Radio Artists Network in Space." }
+		]
 	}
-]
+];
+
+var filler = 
+[
+	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) }
+];
