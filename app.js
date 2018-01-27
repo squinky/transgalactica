@@ -1,5 +1,6 @@
 var currentStation = 99.9;
 var progression = 0;
+var staticAudio;
 var currentStoryAudio, currentStoryLoop;
 var currentTranscriptSection;
 
@@ -11,13 +12,18 @@ function rotateKnob(v)
 	currentStation = (v/100).toFixed(1);
 	$("#station").text(currentStation);
 
-	if (story[progression].station == currentStation)
+	if (Math.abs(story[progression].station - currentStation) < 0.3)
 	{
-		startStoryAudio();
+		if (!currentStoryAudio) initStoryAudio();
+		if (!currentStoryAudio.playing()) currentStoryAudio.play();
+	}
+	else
+	{
+		if (currentStoryAudio) currentStoryAudio.stop();
 	}
 }
 
-function startStoryAudio()
+function initStoryAudio()
 {
 	currentStoryAudio = new Howl(
 	{
@@ -27,29 +33,35 @@ function startStoryAudio()
 			currentTranscriptSection = 0;
 			currentStoryLoop = requestAnimationFrame(playingStoryAudio);
         },
+		onstop: function()
+		{
+			cancelAnimationFrame(currentStoryLoop);
+			transcript(null);
+		},
 		onend: function()
 		{
 			cancelAnimationFrame(currentStoryLoop);
 			transcript(null);
 		}
 	});
-	currentStoryAudio.play();
 }
 
 function playingStoryAudio()
 {
+	if (currentTranscriptSection < story[progression].transcript.length)
+	{
+		if (time >= story[progression].transcript[currentTranscriptSection].time)
+		{
+			transcript(story[progression].transcript[currentTranscriptSection].text);
+			currentTranscriptSection++;
+		}
+	}
+
+	var vol = 1 - 4*Math.abs(story[progression].station - currentStation);
+	currentStoryAudio.volume(vol);
+	staticAudio.volume(1 - vol);
+	$("#transcript").css('opacity', vol);
 	var time = currentStoryAudio.seek();
-
-	if (currentTranscriptSection >= story[progression].transcript.length)
-	{
-		cancelAnimationFrame(currentStoryLoop);
-	}
-
-	if (time >= story[progression].transcript[currentTranscriptSection].time)
-	{
-		transcript(story[progression].transcript[currentTranscriptSection].text);
-		currentTranscriptSection++;
-	}
 
 	currentStoryLoop = requestAnimationFrame(playingStoryAudio);
 }
@@ -70,6 +82,13 @@ function transcript(txt)
 $(document).ready(function()
 {
 	transcript(null);
+
+	staticAudio = new Howl(
+	{
+		src: ["sounds/static.ogg"],
+		loop: true,
+		autoplay: true
+	});
 
 	$("#dial").knob(
 	{

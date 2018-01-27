@@ -20,8 +20,7 @@ var story =
 			{ time: 63.041, text: "Maybe you've been waiting, and trying to decide if you are going to make the leap, try out our little adventure, and see where you end up." },
 			{ time: 70.099, text: "No matter how you come to us, you are enough, you are enough, you are enough. You are trans enough, you are valid enough, you are simply...enough." },
 			{ time: 78.865, text: "We know that there's no such thing as a Utopia, but hey, whatever we make together can't be worse than here, right?"},
-			{ time: 85.407, text: "...Find us..." <br><br><br>"Eight. Nine. Five. Repeating transmission. Eight. Nine. Five."<br><br><br> "...Find us..."}
-						// add the rest here...
+			{ time: 85.407, text: "...Find us...<br>Eight. Nine. Five. Repeating transmission. Eight. Nine. Five.<br>...Find us..."}
 		]
 	}
 ]
