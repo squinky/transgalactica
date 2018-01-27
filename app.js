@@ -1,14 +1,12 @@
+var currentStation = 99.9;
+
 function rotateKnob(v)
 {
-	$("#knob").rotate(v);
-	if (v == 360)
-	{
-		$("#dial").val(0);
-	}
-	else if (v == 0)
-	{
-		$("#dial").val(360);
-	}
+	var angle = (v - 8800)/2000 * 360;
+	$("#knob").rotate(angle);
+
+	currentStation = (v/100).toFixed(1);
+	$("#station").text(currentStation);
 }
 
 $(document).ready(function()
@@ -18,4 +16,6 @@ $(document).ready(function()
         'release' : rotateKnob,
         'change' : rotateKnob
     });
+    $("#dial").val(currentStation*100)
+    rotateKnob(currentStation*100);
 });

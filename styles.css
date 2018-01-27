@@ -1,6 +1,7 @@
 body
 {
 	background-color: #000000;
+	font-family: 'Share Tech', sans-serif;
 }
 
 #galaxy
@@ -52,4 +53,15 @@ body
 	top: 0;
 	width: 100%;
 	opacity: 0.01;
+}
+
+#station
+{
+	position: absolute;
+	top: 26%;
+	left: 15%;
+	width: 25%;
+	font-size: 300%;
+	text-align: center;
+	color: #999;
 }
