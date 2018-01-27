@@ -4,18 +4,96 @@ body
 	font-family: 'Share Tech', sans-serif;
 }
 
-#galaxy
+#galaxy > figure
 {
-	width: 100%;
-	height: 100%;
-	background-image: url("images/galaxy.png");
+	animation: imageAnimation 120s linear infinite 0s;
+	backface-visibility: hidden;
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-position: center center;
+	color: transparent;
+	height: 100%;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 0;
+	margin: 0;
+}
+
+#galaxy > figure:nth-child(1)
+{
+	background-image: url('images/galaxy-01.png');
+}
+#galaxy > figure:nth-child(2)
+{
+	animation-delay: 10s;
+	background-image: url('images/galaxy-02.png');
+}
+#galaxy > figure:nth-child(3)
+{
+	animation-delay: 20s;
+	background-image: url('images/galaxy-03.png');
+}
+#galaxy > figure:nth-child(4)
+{
+	animation-delay: 30s;
+	background-image: url('images/galaxy-04.png');
+}
+#galaxy > figure:nth-child(5)
+{
+	animation-delay: 40s;
+	background-image: url('images/galaxy-05.png');
+}
+#galaxy > figure:nth-child(6)
+{
+	animation-delay: 50s;
+	background-image: url('images/galaxy-06.png');
+}
+#galaxy > figure:nth-child(7)
+{
+	animation-delay: 60s;
+	background-image: url('images/galaxy-07.png');
+}
+#galaxy > figure:nth-child(8)
+{
+	animation-delay: 70s;
+	background-image: url('images/galaxy-08.png');
+}
+#galaxy > figure:nth-child(9)
+{
+	animation-delay: 80s;
+	background-image: url('images/galaxy-09.png');
+}
+#galaxy > figure:nth-child(10)
+{
+	animation-delay: 90s;
+	background-image: url('images/galaxy-10.png');
+}
+#galaxy > figure:nth-child(11)
+{
+	animation-delay: 100s;
+	background-image: url('images/galaxy-11.png');
+}
+#galaxy > figure:nth-child(12)
+{
+	animation-delay: 110s;
+	background-image: url('images/galaxy-12.png');
+}
+
+@keyframes
+imageAnimation
+{
+	0% { animation-timing-function: ease-in; opacity: 0; }
+	8% { animation-timing-function: ease-out; opacity: 1; }
+	17% { opacity: 1; }
+	25% { opacity: 0; }
+	100% { opacity: 0; }
 }
 
 #cockpit
 {
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-image: url("images/cockpit.png");
@@ -80,4 +158,27 @@ body
 	font-size: 200%;
 	color: #ddd;
 	margin: 2%;
+}
+
+#birb
+{
+	animation: shipAnimation 2s linear infinite 0s;
+	position: absolute;
+	width: 50%;
+	padding-top: 28%;
+	top: 20%;
+	left: 50%;
+	margin-left: -25%;
+	background-image: url("images/the-birb.png");
+	background-size: 100%;
+}
+
+@keyframes
+shipAnimation
+{
+	0% { top: 20%; transform: rotate(0deg); }
+	25% { transform: rotate(10deg); }
+	50% { top: 30%;  transform: rotate(0deg); }
+	75% { transform: rotate(-10deg); }
+	100% { top: 20%; transform: rotate(0deg); }
 }

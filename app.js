@@ -5,6 +5,29 @@ var currentStoryAudio, currentStoryLoop;
 var currentTranscriptSection;
 var currentFillerLoop;
 
+function startGame()
+{
+	$("#ship-interior").show();
+	$("#ship-exterior").hide();
+
+	transcript(null);
+
+	staticAudio = new Howl(
+	{
+		src: ["sounds/static.ogg"],
+		loop: true,
+		autoplay: true
+	});
+
+	$("#dial").knob(
+	{
+        'release' : rotateKnob,
+        'change' : rotateKnob
+    });
+    $("#dial").val(currentStation*100)
+    rotateKnob(currentStation*100);
+}
+
 function rotateKnob(v)
 {
 	var angle = (v - 8800)/2000 * 360;
@@ -108,20 +131,6 @@ function transcript(txt)
 
 $(document).ready(function()
 {
-	transcript(null);
-
-	staticAudio = new Howl(
-	{
-		src: ["sounds/static.ogg"],
-		loop: true,
-		autoplay: true
-	});
-
-	$("#dial").knob(
-	{
-        'release' : rotateKnob,
-        'change' : rotateKnob
-    });
-    $("#dial").val(currentStation*100)
-    rotateKnob(currentStation*100);
+	$("#ship-interior").hide();
+	$("#ship-exterior").show();
 });
