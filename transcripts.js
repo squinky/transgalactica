@@ -1,4 +1,3 @@
-
 var story =
 [
 	// #1: A T.R.A.N.S MANIFESTO
@@ -29,7 +28,17 @@ var story =
 		audioFile: "sounds/psa.ogg",
 		transcript:
 		[
-			{ time: 0, text: "This is a Public Service Announcement brought to you by the Trans Radio Artists Network in Space." }
+			{ time: 0, text: "This is a Public Service Announcement brought to you by the Trans Radio Artists Network in Space." },
+			{ time: 5.137, text: "If you are a human being between the ages of zero months and however old the oldest living human being is (maybe like 107, probably?), this message concerns you." },
+			{ time: 14.785, text: "We live under the kyriarchy, the systems of privilege and oppression that we all participate in." },
+			{ time: 19.261, text: "If you feel that you are losing out when society is made more equitable, it is only because you had so much to begin with and others had so little." },
+			{ time: 26.593, text: "Respect lived experiences. It is possible that someone else has experiences that you yourself have not had." },
+			{ time: 32.160, text: "Social constructs still have power and influence over our behaviour even if they are constructs." },
+			{ time: 36.949, text: "Ideological purity is a privilege. Navigating the kyriarchy is complicated." },
+			{ time: 41.288, text: "Recognize genders beyond the binary. Many cultures have historically recognized non-binary genders." },
+			{ time: 47.322, text: "Trans Women are Women. I repeat, Trans Women are Women." },
+			{ time: 51.728, text: "Trans-Exclusionary Radical Feminists are not feminists. Intersectional feminism is the only feminism." },
+			{ time: 57.765, text: "For more information, listen to marginalized people when they tell you about their lived experiences." }
 		]
 	}
 ];
