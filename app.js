@@ -13,10 +13,13 @@ function rotateKnob(v)
 	currentStation = (v/100).toFixed(1);
 	$("#station").text(currentStation);
 
-	if (Math.abs(story[progression+1].station - currentStation) < 0.3)
+	if (progression < story.length-1)
 	{
-		currentStoryAudio = null;
-		progression++;
+		if (Math.abs(story[progression+1].station - currentStation) < 0.3)
+		{
+			currentStoryAudio = null;
+			progression++;
+		}
 	}
 	if (Math.abs(story[progression].station - currentStation) < 0.3)
 	{
@@ -26,11 +29,13 @@ function rotateKnob(v)
 	else
 	{
 		if (currentStoryAudio) currentStoryAudio.stop();
+		staticAudio.volume(1);
+
 		for (var f of filler)
 		{
 			if (Math.abs(f.station - currentStation) < 0.3)
 			{
-				f.audio.play();
+				if (!f.audio.playing()) f.audio.play();
 				var vol = 1 - 4*Math.abs(f.station - currentStation);
 				f.audio.volume(vol);
 				staticAudio.volume(1 - vol);
