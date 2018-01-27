@@ -65,3 +65,19 @@ body
 	text-align: center;
 	color: #999;
 }
+
+#transcript
+{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	width: 90%;
+	top: 5%;
+	left: 5%;
+}
+
+#transcript p
+{
+	font-size: 200%;
+	color: #ddd;
+	margin: 2%;
+}

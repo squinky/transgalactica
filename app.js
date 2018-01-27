@@ -9,6 +9,19 @@ function rotateKnob(v)
 	$("#station").text(currentStation);
 }
 
+function transcript(txt)
+{
+	if (!txt)
+	{
+		$("#transcript").hide();
+	}
+	else
+	{
+		$("#transcript").html("<p>"+txt+"</p>");
+		$("#transcript").show();
+	}
+}
+
 $(document).ready(function()
 {
 	$("#dial").knob(
@@ -18,4 +31,6 @@ $(document).ready(function()
     });
     $("#dial").val(currentStation*100)
     rotateKnob(currentStation*100);
+
+    transcript(null);
 });
