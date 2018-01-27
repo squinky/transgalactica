@@ -48,23 +48,20 @@ function initStoryAudio()
 
 function playingStoryAudio()
 {
-	var time = currentStoryAudio.seek();
-
-	if (currentTranscriptSection >= story[progression].transcript.length)
+	if (currentTranscriptSection < story[progression].transcript.length)
 	{
-		cancelAnimationFrame(currentStoryLoop);
-	}
-
-	if (time >= story[progression].transcript[currentTranscriptSection].time)
-	{
-		transcript(story[progression].transcript[currentTranscriptSection].text);
-		currentTranscriptSection++;
+		if (time >= story[progression].transcript[currentTranscriptSection].time)
+		{
+			transcript(story[progression].transcript[currentTranscriptSection].text);
+			currentTranscriptSection++;
+		}
 	}
 
 	var vol = 1 - 4*Math.abs(story[progression].station - currentStation);
 	currentStoryAudio.volume(vol);
 	staticAudio.volume(1 - vol);
 	$("#transcript").css('opacity', vol);
+	var time = currentStoryAudio.seek();
 
 	currentStoryLoop = requestAnimationFrame(playingStoryAudio);
 }
