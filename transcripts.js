@@ -39,7 +39,6 @@ var story =
 			{ time: 47.322, text: "Trans Women are Women. I repeat, Trans Women are Women." },
 			{ time: 51.728, text: "Trans-Exclusionary Radical Feminists are not feminists. Intersectional feminism is the only feminism." },
 			{ time: 57.765, text: "For more information, listen to marginalized people when they tell you about their lived experiences." }
-
 		]
 	}
 ];
