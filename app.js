@@ -28,9 +28,12 @@ function rotateKnob(v)
 		if (currentStoryAudio) currentStoryAudio.stop();
 		for (var f of filler)
 		{
-			if (f.station == currentStation)
+			if (Math.abs(f.station - currentStation) < 0.3)
 			{
 				f.audio.play();
+				var vol = 1 - 4*Math.abs(f.station - currentStation);
+				f.audio.volume(vol);
+				staticAudio.volume(1 - vol);
 			}
 			else if (f.audio.playing())
 			{
