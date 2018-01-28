@@ -79,10 +79,10 @@ var story =
 		transcript:
 		[
 			{ time: 0, text: "You are listening to the Trans Radio Artists Network in Space. Please enjoy this special musical presentation by Squinky and the Squinkettes." },
-			{ time: 16.472, text: "Caught a ship out to nowhere,"<br><br>"Nowhere is some place to be"<br><br>"Better suited to be an alien,"<br><br>"It's no mystery to me"<br><br>"La la la Transgalactica"},
-			{ time: 45.070, text: "So I'm extra-terrestrial,"<br><br>"An extraneous vessel,"<br><br>"Came to find my place,"<br><br>"Putting the out in outer space."<br><br>"La la la Transgalactica"},
-			{ time: 74.466, text: "In system upon system,"<br><br>"Star to pulsing quasar,"<br><br>"I have seen the people suffer,"<br><br>"Under the Kyriarchy."<br><br>"La la la Transgalactica"},
-			{ time: 103.979, text: "Detected a signal,"<br><br>"92.0 light years away"<br><br>"Hidden out in space,"<br><br>"Maybe they'll let me stay"<br><br>"La la la Transgalactica"}
+			{ time: 16.472, text: "Caught a ship out to nowhere,<br>Nowhere is some place to be<br>Better suited to be an alien,<br>It's no mystery to me<br>La la la Transgalactica"},
+			{ time: 45.070, text: "So I'm extra-terrestrial,<br>An extraneous vessel,<br>Came to find my place,<br>Putting the out in outer space.<br>La la la Transgalactica"},
+			{ time: 74.466, text: "In system upon system,<br>Star to pulsing quasar,<br>I have seen the people suffer,<br>Under the Kyriarchy.<br>La la la Transgalactica"},
+			{ time: 103.979, text: "Detected a signal,<br>92.0 light years away<br>Hidden out in space,<br>Maybe they'll let me stay<br>La la la Transgalactica"}
 		]
 	},
 
@@ -104,7 +104,6 @@ var story =
 
 var filler = 
 [
-<<<<<<< HEAD
 	{ station: 89.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
 	{ station: 90.4, audio: new Howl({ src: "sounds/marchingband.ogg", loop: true }) },
 	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
@@ -115,13 +114,5 @@ var filler =
 	{ station: 101.1, audio: new Howl({ src: "sounds/metal.ogg", loop: true }) },
 	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
 	{ station: 103.8, audio: new Howl({ src: "sounds/classical.ogg", loop: true }) },
-=======
-	{ station: 88.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
-	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
-	{ station: 94.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
-	{ station: 97.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
-	{ station: 98.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
-	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
->>>>>>> origin/transcripts
 	{ station: 105.2, audio: new Howl({ src: "sounds/lost.ogg", loop: true }) }
 ];

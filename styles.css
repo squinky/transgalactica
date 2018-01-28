@@ -162,7 +162,7 @@ imageAnimation
 	margin: 2%;
 }
 
-#birb
+#ship
 {
 	animation: shipAnimation 2s linear infinite 0s;
 	position: absolute;
@@ -172,8 +172,6 @@ imageAnimation
 	left: 50%;
 	margin-top: -10%;
 	margin-left: -25%;
-	background-image: url("images/the-birb.png");
-	background-size: 100%;
 	cursor: pointer;
 }
 
@@ -185,4 +183,127 @@ shipAnimation
 	50% { margin-top: -15%;  transform: rotate(0deg); }
 	75% { transform: rotate(-10deg); }
 	100% { margin-top: -10%; transform: rotate(0deg); }
+}
+
+#birb
+{
+	position: absolute;
+	background-image: url("images/the-birb.png");
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#flames
+{
+	animation: flameAnimation 0.75s infinite 0s;
+	background-image: url("images/flames-1.png");
+	background-size: 100%;
+	position: absolute;
+	width: 50%;
+	padding-top: 33%;
+	top: 12%;
+    left: -28%;
+}
+
+@keyframes
+flameAnimation
+{
+	0% { background-image: url("images/flames-1.png"); }
+	24% { background-image: url("images/flames-1.png"); }
+	25% { background-image: url("images/flames-2.png"); }
+	49% { background-image: url("images/flames-2.png"); }
+	50% { background-image: url("images/flames-3.png"); }
+	74% { background-image: url("images/flames-3.png"); }
+	75% { background-image: url("images/flames-4.png"); }
+	100% { background-image: url("images/flames-4.png"); }
+}
+
+#titlescreen
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#title
+{
+	animation: titleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/transgalactica.png");
+	background-size: 100%;
+	width: 40%;
+    padding-top: 8%;
+    top: 7%;
+    left: 6%;
+    transform: rotate(-15deg);
+}
+
+#subtitle
+{
+	animation: subtitleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/tune-adventure.png");
+	background-size: 100%;
+	width: 50%;
+    padding-top: 6%;
+    bottom: 14%;
+    right: 8%;
+    transform: rotate(5deg);
+}
+
+#endcredits
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#theend
+{
+	animation: titleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/the-end.png");
+	background-size: 100%;
+	width: 22%;
+    padding-top: 8%;
+    top: 13%;
+    left: 6%;
+    transform: rotate(-15deg);
+}
+
+#names
+{
+	animation: subtitleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/names.png");
+	background-size: 100%;
+	width: 50%;
+    padding-top: 12%;
+    bottom: 14%;
+    right: 8%;
+    transform: rotate(5deg);
+}
+
+@keyframes
+titleAnimation
+{
+	0% { margin-top: 0; transform: rotate(-15deg); }
+	25% { margin-top: 1%; }
+	50% { margin-top: 0; transform: rotate(0deg); }
+	75% { margin-top: -1%; }
+	100% { margin-top: 0; transform: rotate(-15deg); }
+}
+
+@keyframes
+subtitleAnimation
+{
+	0% { margin-bottom: 0; transform: rotate(5deg); }
+	25% { margin-bottom: 1%; }
+	50% { margin-bottom: 0; transform: rotate(-2deg); }
+	75% { margin-bottom: -1%; }
+	100% { margin-bottom: 0; transform: rotate(5deg); }
 }
