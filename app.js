@@ -28,6 +28,18 @@ function startGame()
     rotateKnob(currentStation*100);
 }
 
+function endGame()
+{
+	currentStoryAudio.stop();
+	staticAudio.stop();
+
+	$("#ship-interior").hide();
+	$("#ship-exterior").show();
+
+	$("#birb").off("click");
+	$("#birb").css('cursor', 'auto');
+}
+
 function rotateKnob(v)
 {
 	var angle = (v - 8800)/2000 * 360;
@@ -53,20 +65,20 @@ function rotateKnob(v)
 	{
 		if (currentStoryAudio) currentStoryAudio.stop();
 		staticAudio.volume(1);
+	}
 
-		for (var f of filler)
+	for (var f of filler)
+	{
+		if (Math.abs(f.station - currentStation) < 0.3)
 		{
-			if (Math.abs(f.station - currentStation) < 0.3)
-			{
-				if (!f.audio.playing()) f.audio.play();
-				var vol = 1 - 4*Math.abs(f.station - currentStation);
-				f.audio.volume(vol);
-				staticAudio.volume(1 - vol);
-			}
-			else if (f.audio.playing())
-			{
-				f.audio.pause();
-			}
+			if (!f.audio.playing()) f.audio.play();
+			var vol = 1 - 4*Math.abs(f.station - currentStation);
+			f.audio.volume(vol);
+			staticAudio.volume(1 - vol);
+		}
+		else if (f.audio.playing())
+		{
+			f.audio.pause();
 		}
 	}
 }
@@ -91,6 +103,7 @@ function initStoryAudio()
 		{
 			cancelAnimationFrame(currentStoryLoop);
 			transcript(null);
+			if (progression == story.length-1) endGame();
 		}
 	});
 }
