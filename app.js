@@ -34,6 +34,7 @@ function endGame()
 	staticAudio.stop();
 
 	$("#ship-interior").hide();
+	$("#endcredits").show();
 	$("#ship-exterior").show();
 
 	$("#birb").off("click");
@@ -145,6 +146,7 @@ function transcript(txt)
 $(document).ready(function()
 {
 	$("#ship-interior").hide();
+	$("#endcredits").hide();
 	$("#ship-exterior").show();
 
 	$("#birb").click(startGame);
