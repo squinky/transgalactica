@@ -86,9 +86,9 @@ imageAnimation
 {
 	0% { animation-timing-function: ease-out; opacity: 1; }
 	8% { opacity: 1; }
-	17% { animation-timing-function: ease-in; opacity: 0; }
-	25% { opacity: 0; }
-	100% { opacity: 0; }
+	17% { opacity: 0; }
+	92% { animation-timing-function: ease-in; opacity: 0; }
+	100% { opacity: 1; }
 }
 
 #cockpit
