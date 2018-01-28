@@ -4,6 +4,7 @@ var staticAudio;
 var currentStoryAudio, currentStoryLoop;
 var currentTranscriptSection;
 var currentFillerLoop;
+var continueToNextStory = false;
 
 function startGame()
 {
@@ -49,8 +50,9 @@ function rotateKnob(v)
 
 	if (progression < story.length-1)
 	{
-		if (Math.abs(story[progression+1].station - currentStation) < 0.3)
+		if (continueToNextStory && Math.abs(story[progression+1].station - currentStation) < 0.3)
 		{
+			continueToNextStory = false;
 			currentStoryAudio = null;
 			progression++;
 		}
@@ -124,6 +126,8 @@ function playingStoryAudio()
 	currentStoryAudio.volume(vol);
 	staticAudio.volume(1 - vol);
 	$("#transcript").css('opacity', vol);
+
+	if (time >= 30) continueToNextStory = true;
 
 	currentStoryLoop = requestAnimationFrame(playingStoryAudio);
 }
