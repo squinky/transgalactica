@@ -220,6 +220,40 @@ flameAnimation
 	100% { background-image: url("images/flames-4.png"); }
 }
 
+#titlescreen
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#title
+{
+	animation: titleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/transgalactica.png");
+	background-size: 100%;
+	width: 40%;
+    padding-top: 8%;
+    top: 7%;
+    left: 6%;
+    transform: rotate(-15deg);
+}
+
+#subtitle
+{
+	animation: subtitleAnimation 2s linear infinite 0s;
+	position: absolute;
+	background-image: url("images/tune-adventure.png");
+	background-size: 100%;
+	width: 50%;
+    padding-top: 6%;
+    bottom: 14%;
+    right: 8%;
+    transform: rotate(5deg);
+}
+
 #endcredits
 {
 	position: absolute;
@@ -230,7 +264,7 @@ flameAnimation
 
 #theend
 {
-	animation: endAnimation 2s linear infinite 0s;
+	animation: titleAnimation 2s linear infinite 0s;
 	position: absolute;
 	background-image: url("images/the-end.png");
 	background-size: 100%;
@@ -241,19 +275,9 @@ flameAnimation
     transform: rotate(-15deg);
 }
 
-@keyframes
-endAnimation
-{
-	0% { margin-top: 0; transform: rotate(-15deg); }
-	25% { margin-top: 1%; }
-	50% { margin-top: 0; transform: rotate(5deg); }
-	75% { margin-top: -1%; }
-	100% { margin-top: 0; transform: rotate(-15deg); }
-}
-
 #names
 {
-	animation: namesAnimation 2s linear infinite 0s;
+	animation: subtitleAnimation 2s linear infinite 0s;
 	position: absolute;
 	background-image: url("images/names.png");
 	background-size: 100%;
@@ -265,7 +289,17 @@ endAnimation
 }
 
 @keyframes
-namesAnimation
+titleAnimation
+{
+	0% { margin-top: 0; transform: rotate(-15deg); }
+	25% { margin-top: 1%; }
+	50% { margin-top: 0; transform: rotate(0deg); }
+	75% { margin-top: -1%; }
+	100% { margin-top: 0; transform: rotate(-15deg); }
+}
+
+@keyframes
+subtitleAnimation
 {
 	0% { margin-bottom: 0; transform: rotate(5deg); }
 	25% { margin-bottom: 1%; }

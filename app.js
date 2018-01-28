@@ -34,6 +34,7 @@ function endGame()
 	staticAudio.stop();
 
 	$("#ship-interior").hide();
+	$("#titlescreen").hide();
 	$("#endcredits").show();
 	$("#ship-exterior").show();
 
@@ -146,6 +147,7 @@ function transcript(txt)
 $(document).ready(function()
 {
 	$("#ship-interior").hide();
+	$("#titlescreen").show();
 	$("#endcredits").hide();
 	$("#ship-exterior").show();
 
