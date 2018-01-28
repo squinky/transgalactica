@@ -133,4 +133,13 @@ $(document).ready(function()
 {
 	$("#ship-interior").hide();
 	$("#ship-exterior").show();
+
+	$("#birb").click(startGame);
+
+	var ambient = new Howl(
+	{
+		src: ["sounds/ambient.ogg"],
+		loop: true,
+		autoplay: true
+	});
 });
