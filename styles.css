@@ -162,7 +162,7 @@ imageAnimation
 	margin: 2%;
 }
 
-#birb
+#ship
 {
 	animation: shipAnimation 2s linear infinite 0s;
 	position: absolute;
@@ -172,8 +172,6 @@ imageAnimation
 	left: 50%;
 	margin-top: -10%;
 	margin-left: -25%;
-	background-image: url("images/the-birb.png");
-	background-size: 100%;
 	cursor: pointer;
 }
 
@@ -185,4 +183,39 @@ shipAnimation
 	50% { margin-top: -15%;  transform: rotate(0deg); }
 	75% { transform: rotate(-10deg); }
 	100% { margin-top: -10%; transform: rotate(0deg); }
+}
+
+#birb
+{
+	position: absolute;
+	background-image: url("images/the-birb.png");
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+#flames
+{
+	animation: flameAnimation 0.75s infinite 0s;
+	background-image: url("images/flames-1.png");
+	background-size: 100%;
+	position: absolute;
+	width: 50%;
+	padding-top: 33%;
+	top: 12%;
+    left: -28%;
+}
+
+@keyframes
+flameAnimation
+{
+	0% { background-image: url("images/flames-1.png"); }
+	24% { background-image: url("images/flames-1.png"); }
+	25% { background-image: url("images/flames-2.png"); }
+	49% { background-image: url("images/flames-2.png"); }
+	50% { background-image: url("images/flames-3.png"); }
+	74% { background-image: url("images/flames-3.png"); }
+	75% { background-image: url("images/flames-4.png"); }
+	100% { background-image: url("images/flames-4.png"); }
 }
