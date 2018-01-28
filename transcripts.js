@@ -91,7 +91,10 @@ var story =
 var filler = 
 [
 	{ station: 88.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
-	{ station: 91.7, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
+	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
 	{ station: 94.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
-	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) }
+	{ station: 97.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
+	{ station: 98.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
+	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
+	{ station: 105.2, audio: new Howl({ src: "sounds/lost.ogg", loop: true }) }
 ];
