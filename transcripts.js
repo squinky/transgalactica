@@ -1,6 +1,6 @@
 var story =
 [
-	// #1: A T.R.A.N.S MANIFESTO
+		// #1: A T.R.A.N.S MANIFESTO
 	{
 		station: 99.9,
 		audioFile: "sounds/manifesto.ogg",
@@ -22,7 +22,7 @@ var story =
 			{ time: 85.407, text: "...Find us...<br>Eight. Nine. Five. Repeating transmission. Eight. Nine. Five.<br>...Find us..."}
 		]
 	},
-	// #2: A PSA
+		// #2: A PSA
 	{
 		station: 89.5,
 		audioFile: "sounds/psa.ogg",
@@ -72,9 +72,23 @@ var story =
 			{ time: 53.138, text: "CALL 1-995-234-5000. That number again is 1-995-234-5000!" }
 		]
 	},
-		// #5: Ending -- change station whenever reflecting a new content entry
+		// #5: theme-song
 	{
 		station: 99.5,
+		audioFile: "sounds/theme-song.ogg",
+		transcript:
+		[
+			{ time: 0, text: "You are listening to the Trans Radio Artists Network in Space. Please enjoy this special musical presentation by Squinky and the Squinkettes." },
+			{ time: 16.472, text: "Caught a ship out to nowhere,"<br><br>"Nowhere is some place to be"<br><br>"Better suited to be an alien,"<br><br>"It's no mystery to me"<br><br>"La la la Transgalactica"},
+			{ time: 45.070, text: "So I'm extra-terrestrial,"<br><br>"An extraneous vessel,"<br><br>"Came to find my place,"<br><br>"Putting the out in outer space."<br><br>"La la la Transgalactica"},
+			{ time: 74.466, text: "In system upon system,"<br><br>"Star to pulsing quasar,"<br><br>"I have seen the people suffer,"<br><br>"Under the Kyriarchy."<br><br>"La la la Transgalactica"},
+			{ time: 103.979, text: "Detected a signal,"<br><br>"92.0 light years away"<br><br>"Hidden out in space,"<br><br>"Maybe they'll let me stay"<br><br>"La la la Transgalactica"}
+		]
+	},
+
+		// #6: Ending -- change station whenever reflecting a new content entry
+	{
+		station: 92.0,
 		audioFile: "sounds/the-ending.ogg",
 		transcript:
 		[
@@ -90,11 +104,24 @@ var story =
 
 var filler = 
 [
+<<<<<<< HEAD
+	{ station: 89.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
+	{ station: 90.4, audio: new Howl({ src: "sounds/marchingband.ogg", loop: true }) },
+	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
+	{ station: 94.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
+	{ station: 95.3, audio: new Howl({ src: "sounds/mariachi.ogg", loop: true }) },
+	{ station: 96.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
+	{ station: 97.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
+	{ station: 101.1, audio: new Howl({ src: "sounds/metal.ogg", loop: true }) },
+	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
+	{ station: 103.8, audio: new Howl({ src: "sounds/classical.ogg", loop: true }) },
+=======
 	{ station: 88.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
 	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
 	{ station: 94.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
 	{ station: 97.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
 	{ station: 98.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
 	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
+>>>>>>> origin/transcripts
 	{ station: 105.2, audio: new Howl({ src: "sounds/lost.ogg", loop: true }) }
 ];
