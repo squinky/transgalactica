@@ -37,9 +37,6 @@ function endGame()
 	$("#titlescreen").hide();
 	$("#endcredits").show();
 	$("#ship-exterior").show();
-
-	$("#birb").off("click");
-	$("#birb").css('cursor', 'auto');
 }
 
 function rotateKnob(v)
@@ -151,7 +148,7 @@ $(document).ready(function()
 	$("#endcredits").hide();
 	$("#ship-exterior").show();
 
-	$("#birb").click(startGame);
+	$("#titlescreen").click(startGame);
 
 	var ambient = new Howl(
 	{

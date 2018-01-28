@@ -47,11 +47,11 @@ var story =
 		audioFile: "sounds/singular-they.ogg",
 		transcript:
 		[
-			{ time: 0, text: "You’re listening to the Trans Radio Artists Network in Space." },
+			{ time: 0, text: "You're listening to the Trans Radio Artists Network in Space." },
 			{ time: 3.545, text: "Here is a brief history of singular they pronouns:" },
 			{ time: 6.717, text: "Chaucer, a famous old dead white dude who wrote about farts and bodily humour a lot, and Shakespeare, an equally if not more famous dead white dude, who is credited with inventing words whenever he wanted, used singular they." },
 			{ time: 17.500, text: "If you add their lifespans together, they lived and collectively used singular they for 108 years. But, other than that, the English language hasn't changed in any way whatsoever since Elizabethan times." },
-			{ time: 26.904, text: "Now, English has no academy that determines correct usage, spelling or grammar rules, unlike some other languages (Here’s looking at you, France!), but nevertheless, in the mid-eighties, most style guides changed their recommendations about singular they to allow its use." },
+			{ time: 26.904, text: "Now, English has no academy that determines correct usage, spelling or grammar rules, unlike some other languages (Here's looking at you, France!), but nevertheless, in the mid-eighties, most style guides changed their recommendations about singular they to allow its use." },
 			{ time: 39.460, text: "But, since your dad's elementary school teacher said that he should use 'he or she' instead of 'they' when he was a wee cabbage, and since your dad is considered an authority on the English language (right?), the entire world decided that singular they pronouns were shit and to nix them entirely." },
 			{ time: 51.943, text: "So now we're stuck with the gender binary forever, because languages never evolve or change to suit the needs of their speakers. Damn." }
 		]
@@ -104,15 +104,15 @@ var story =
 
 var filler = 
 [
-	{ station: 89.3, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
+	{ station: 88.6, audio: new Howl({ src: "sounds/spacechase.ogg", loop: true }) },
 	{ station: 90.4, audio: new Howl({ src: "sounds/marchingband.ogg", loop: true }) },
-	{ station: 91.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
-	{ station: 94.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
-	{ station: 95.3, audio: new Howl({ src: "sounds/mariachi.ogg", loop: true }) },
-	{ station: 96.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
-	{ station: 97.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
-	{ station: 101.1, audio: new Howl({ src: "sounds/metal.ogg", loop: true }) },
-	{ station: 102.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
-	{ station: 103.8, audio: new Howl({ src: "sounds/classical.ogg", loop: true }) },
-	{ station: 105.2, audio: new Howl({ src: "sounds/lost.ogg", loop: true }) }
+	{ station: 93.7, audio: new Howl({ src: "sounds/strange.ogg", loop: true }) },
+	{ station: 95.5, audio: new Howl({ src: "sounds/bass.ogg", loop: true }) },
+	{ station: 96.3, audio: new Howl({ src: "sounds/mariachi.ogg", loop: true }) },
+	{ station: 97.2, audio: new Howl({ src: "sounds/rejection.ogg", loop: true }) },
+	{ station: 100.8, audio: new Howl({ src: "sounds/beats.ogg", loop: true }) },
+	{ station: 102.1, audio: new Howl({ src: "sounds/metal.ogg", loop: true }) },
+	{ station: 103.4, audio: new Howl({ src: "sounds/country.ogg", loop: true }) },
+	{ station: 104.8, audio: new Howl({ src: "sounds/classical.ogg", loop: true }) },
+	{ station: 106.2, audio: new Howl({ src: "sounds/lost.ogg", loop: true }) }
 ];

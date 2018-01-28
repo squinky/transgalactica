@@ -125,6 +125,7 @@ imageAnimation
 	left: 52.5%;
 	background-image: url("images/knob.png");
 	background-size: 100%;
+	cursor: pointer;
 }
 
 #knob canvas
@@ -172,7 +173,6 @@ imageAnimation
 	left: 50%;
 	margin-top: -10%;
 	margin-left: -25%;
-	cursor: pointer;
 }
 
 @keyframes
@@ -226,6 +226,7 @@ flameAnimation
 	width: 100%;
 	height: 100%;
 	top: 0;
+	cursor: pointer;
 }
 
 #title
